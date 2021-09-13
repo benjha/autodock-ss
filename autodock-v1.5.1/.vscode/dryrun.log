@@ -1,0 +1,60 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/benjha/code/nbvl/autodock-v1.5.1'
+ 
+rm -f ./host/inc/performdocking.h ./host/src/performdocking.cpp
+echo "Building" adgpu_analysis "..."
+g++ \
+./host/src/calcenergy.cpp ./host/src/getparameters.cpp ./host/src/main.cpp ./host/src/miscellaneous.cpp ./host/src/performdocking.cpp ./host/src/processgrid.cpp ./host/src/processligand.cpp ./host/src/processresult.cpp ./host/src/setup.cpp \
+-std=c++11 -I./common -I./host/inc -DVERSION=\"v1.5.1-dirty\" \
+-o./bin/adgpu_analysis \
+ -O3 -DTOOLMODE 
+if test -z "$DEVICE"; then \
+	echo "Please set DEVICE to either CPU, GPU, CUDA, or OCLGPU to build docking software."; \
+	exit 1; \
+else \
+	if [ "$DEVICE" = "CPU" ]; then \
+		echo "DEVICE is set to $DEVICE"; \
+	else \
+		if [ "$DEVICE" = "GPU" ]; then \
+			echo "DEVICE is set to $DEVICE"; \
+		else \
+			echo "DEVICE value is invalid. Please set DEVICE to either CPU, GPU, CUDA, or OCLGPU"; \
+			exit 1; \
+		fi; \
+	fi; \
+fi; \
+echo " "
+if test -z "$CPU_INCLUDE_PATH"; then \
+	echo "CPU_INCLUDE_PATH is undefined"; \
+else \
+	echo "CPU_INCLUDE_PATH is set to $CPU_INCLUDE_PATH"; \
+fi; \
+if test -z "$CPU_LIBRARY_PATH"; then \
+	echo "CPU_LIBRARY_PATH is undefined"; \
+else \
+	echo "CPU_LIBRARY_PATH is set to $CPU_LIBRARY_PATH"; \
+fi; \
+echo " "
+if test -z "$GPU_INCLUDE_PATH"; then \
+	echo "GPU_INCLUDE_PATH is undefined"; \
+else \
+	echo "GPU_INCLUDE_PATH is set to $GPU_INCLUDE_PATH"; \
+fi; \
+if test -z "$GPU_LIBRARY_PATH"; then \
+	echo "GPU_LIBRARY_PATH is undefined"; \
+else \
+	echo "GPU_LIBRARY_PATH is set to $GPU_LIBRARY_PATH"; \
+fi; \
+echo " "
+./stringify_ocl_krnls.sh
+ln -sf performdocking.h.OpenCL ./host/inc/performdocking.h
+ln -sf performdocking.cpp.OpenCL ./host/src/performdocking.cpp
+echo "Building" autodock "..."
+g++ \
+./wrapcl/src/BufferObjects.cpp ./wrapcl/src/CommandQueues.cpp ./wrapcl/src/Programs.cpp ./wrapcl/src/Kernels.cpp ./wrapcl/src/Devices.cpp ./wrapcl/src/ImportSource.cpp ./wrapcl/src/Platforms.cpp ./wrapcl/src/Contexts.cpp ./wrapcl/src/ImportBinary.cpp ./wrapcl/src/listAttributes.cpp ./host/src/calcenergy.cpp ./host/src/getparameters.cpp ./host/src/main.cpp ./host/src/miscellaneous.cpp ./host/src/performdocking.cpp ./host/src/processgrid.cpp ./host/src/processligand.cpp ./host/src/processresult.cpp ./host/src/setup.cpp \
+-std=c++11 -I./common -I./wrapcl/inc -I./host/inc -I./device -I -L -DVERSION=\"v1.5.1-dirty\" \
+-lOpenCL \
+-o./bin/autodock \
+   -O3   -DKRNL_SOURCE=./device/calcenergy.cl -DKRNL_DIRECTORY=./device -DKCMN_DIRECTORY=./common -DK1="gpu_calc_initpop" -DK2="gpu_sum_evals" -DK3="perform_LS" -DK4="gpu_gen_and_eval_newpops" -DK5="gradient_minSD" -DK6="gradient_minFire" -DK7="gradient_minAD"
+make: Leaving directory '/home/benjha/code/nbvl/autodock-v1.5.1'
+ 

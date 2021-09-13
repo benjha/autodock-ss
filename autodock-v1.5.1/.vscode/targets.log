@@ -1,0 +1,553 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun Sep 12 16:26:35 2021
+
+# Variables
+
+# makefile (from 'Makefile.OpenCL', line 79)
+K7_NAME = "gradient_minAD"
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = xfce
+# default
+.SHELLFLAGS := -c
+# makefile (from 'Makefile.OpenCL', line 70)
+KRNL_MAIN = calcenergy.cl
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile.OpenCL', line 281)
+NGEN := 27000
+# makefile (from 'Makefile.OpenCL', line 58)
+TARGET := autodock
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile.OpenCL', line 71)
+KRNL_SRC = $(KRNL_DIR)/$(KRNL_MAIN)
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /home/benjha/.Xauthority
+# environment
+GDMSESSION = xfce
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /home/benjha/code/nbvl/autodock-v1.5.1
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile.OpenCL', line 95)
+BIN := 
+# environment
+GDM_LANG = en_US
+# makefile (from 'Makefile.OpenCL', line 282)
+POPSIZE := 150
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile.OpenCL', line 283)
+TESTNAME := test
+# environment
+_ = /usr/share/code/code
+# makefile (from 'Makefile.OpenCL', line 238)
+CFLAGS = -std=c++11 $(IFLAGS) $(LFLAGS) -DVERSION=\"$(GIT_VERSION)\"
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-xfce:/etc/xdg:/etc/xdg
+# makefile (from 'Makefile.OpenCL', line 1)
+MAKEFILE_LIST :=  Makefile Makefile.OpenCL
+# makefile (from 'Makefile.OpenCL', line 284)
+TESTLS := sw
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile.OpenCL', line 54)
+KRNL_DIR = ./device
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+MANDATORY_PATH = /usr/share/gconf/xfce.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/xfce4:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop:/usr/share
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'Makefile.OpenCL', line 51)
+OCL_SRC_DIR = ./wrapcl/src
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile.OpenCL', line 80)
+K_NAMES = -DK1=$(K1_NAME) -DK2=$(K2_NAME) -DK3=$(K3_NAME) -DK4=$(K4_NAME) -DK5=$(K5_NAME) -DK6=$(K6_NAME) -DK7=$(K7_NAME)
+# makefile (from 'Makefile.OpenCL', line 280)
+NRUN := 100
+# makefile (from 'Makefile.OpenCL', line 75)
+K3_NAME = "perform_LS"
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# makefile (from 'Makefile.OpenCL', line 14)
+CPP = g++
+# environment
+VSCODE_CWD = /home/benjha
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/benjha/bin:/home/benjha/.local/bin:/home/benjha/Programs/miniconda3/condabin:/usr/local/cuda-10.0/bin:/home/benjha/bin:/home/benjha/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# makefile (from 'Makefile.OpenCL', line 300)
+ASTEX_TESTNAME := test_astex
+# makefile (from 'Makefile.OpenCL', line 56)
+BIN_DIR = ./bin
+# environment
+SESSION_MANAGER = local/fulano:@/tmp/.ICE-unix/1328,unix/fulano:/tmp/.ICE-unix/1328
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile.OpenCL', line 176)
+REPRO = NO
+# makefile (from 'Makefile.OpenCL', line 78)
+K6_NAME = "gradient_minFire"
+# makefile (from 'Makefile.OpenCL', line 147)
+OCL_DEBUG_BASIC = -DPLATFORM_ATTRIBUTES_DISPLAY -DCMD_QUEUE_PROFILING_ENABLE -DDEVICE_ATTRIBUTES_DISPLAY
+# environment
+XDG_MENU_PREFIX = xfce-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=03885276-1cfc-4228-8c52-7334ad5e8dd0&iid=03885276-1cfc-4228-8c52-7334ad5e8dd0&sid=03885276-1cfc-4228-8c52-7334ad5e8dd0","uploadToServer":true}
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile.OpenCL', line 301)
+ASTEX_LS := sw
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/benjha
+# environment
+LS_COLORS = 
+# environment
+XDG_SESSION_DESKTOP = xfce
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-FHL2kH4EGIXI/agent.1328
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0.0
+# environment
+CONDA_EXE = /home/benjha/Programs/miniconda3/bin/conda
+# makefile (from 'Makefile.OpenCL', line 67)
+OCL_SRC = $(wildcard $(OCL_SRC_DIR)/*.cpp)
+# makefile (from 'Makefile.OpenCL', line 169)
+OPT = -O3
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/benjha/code/nbvl/autodock-v1.5.1
+# makefile (from 'Makefile.OpenCL', line 55)
+KCMN_DIR = $(COMMON_DIR)
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 1389
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
+# makefile (from 'Makefile.OpenCL', line 53)
+HOST_SRC_DIR = ./host/src
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/benjha
+# environment
+LD_LIBRARY_PATH = /usr/local/cuda-10.0/lib64:
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CODE_CACHE_PATH = /home/benjha/.config/Code/CachedData/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff
+# environment
+LOGNAME = benjha
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# makefile (from 'Makefile.OpenCL', line 161)
+OCL_DEBUG_ALL = $(OCL_DEBUG_BASIC) -DCONTEXT_INFO_DISPLAY -DCMD_QUEUE_INFO_DISPLAY -DCMD_QUEUE_PROFILING_ENABLE -DPROGRAM_INFO_DISPLAY -DPROGRAM_BUILD_INFO_DISPLAY -DKERNEL_INFO_DISPLAY -DKERNEL_WORK_GROUP_INFO_DISPLAY -DBUFFER_OBJECT_INFO_DISPLAY -DCMD_QUEUE_OUTORDER_ENABLE
+# makefile (from 'Makefile.OpenCL', line 297)
+ASTEX_PDB := 2bsm
+# makefile (from 'Makefile.OpenCL', line 59)
+TOOL_TARGET := adgpu_analysis
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 7
+# makefile (from 'Makefile.OpenCL', line 15)
+LIB_OPENCL = -lOpenCL
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 0
+# makefile (from 'Makefile.OpenCL', line 50)
+OCL_INC_DIR = ./wrapcl/inc
+# makefile (from 'Makefile.OpenCL', line 279)
+PDB := 3ce3
+# makefile (from 'Makefile.OpenCL', line 144)
+CONFIG = RELEASE
+# makefile (from 'Makefile.OpenCL', line 82)
+KFLAGS = -DKRNL_SOURCE=$(KRNL_DIR)/$(KRNL_MAIN) -DKRNL_DIRECTORY=$(KRNL_DIR) -DKCMN_DIRECTORY=$(KCMN_DIR) $(K_NAMES)
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-61445ca3-6b2c-46c9-b677-9ba5695ef9cc.sock
+# makefile (from 'Makefile.OpenCL', line 61)
+IFLAGS = -I$(COMMON_DIR) -I$(OCL_INC_DIR) -I$(HOST_INC_DIR) -I$(KRNL_DIR) -I$(OCLA_INC_PATH)
+# environment
+XDG_SESSION_ID = c2
+# environment
+USER = benjha
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = XFCE
+# makefile (from 'Makefile.OpenCL', line 298)
+ASTEX_NRUN := 10
+# makefile (from 'Makefile.OpenCL', line 16)
+UNAME := Linux
+# makefile (from 'Makefile.OpenCL', line 100)
+NUMWI = 
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'Makefile.OpenCL', line 62)
+LFLAGS = -L$(OCLA_LIB_PATH)
+# environment
+CONDA_SHLVL = 0
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = en_US
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-cae27ba7-1.60.0-main.sock
+# environment
+PANEL_GDK_CORE_DEVICE_EVENTS = 0
+# makefile (from 'Makefile.OpenCL', line 181)
+REP = 
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/benjha/.config/Code/exthost Crash Reports
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# makefile (from 'Makefile.OpenCL', line 236)
+GIT_VERSION := v1.5.1-dirty
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile.OpenCL', line 73)
+K1_NAME = "gpu_calc_initpop"
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/xfce.default.path
+# makefile (from 'Makefile.OpenCL', line 76)
+K4_NAME = "gpu_gen_and_eval_newpops"
+# 'override' directive
+.SHELLSTATUS := 0
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 28)
+TEST_CUDA := yes
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'Makefile.OpenCL', line 239)
+TOOL_CFLAGS = -std=c++11 -I$(COMMON_DIR) -I$(HOST_INC_DIR) -DVERSION=\"$(GIT_VERSION)\"
+# makefile (from 'Makefile.OpenCL', line 49)
+COMMON_DIR = ./common
+# environment
+LC_ALL = C
+ 
+# makefile (from 'Makefile.OpenCL', line 299)
+ASTEX_POPSIZE := 10
+# environment
+CONDA_PYTHON_EXE = /home/benjha/Programs/miniconda3/bin/python
+# makefile (from 'Makefile.OpenCL', line 52)
+HOST_INC_DIR = ./host/inc
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+_CE_M = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# makefile (from 'Makefile.OpenCL', line 74)
+K2_NAME = "gpu_sum_evals"
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# makefile (from 'Makefile.OpenCL', line 77)
+K5_NAME = "gradient_minSD"
+# environment
+VSCODE_PID = 12474
+# environment
+_CE_CONDA = 
+# variable set hash-table stats:
+# Load=151/1024=15%, Rehash=0, Collisions=22/231=10%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2055, inode 5772501): 36 files, no impossibilities.
+
+# 36 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+unlink-code:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := unlink-code
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/13=15%
+#  recipe to execute (from 'Makefile.OpenCL', line 252):
+	rm -f $(HOST_INC_DIR)/performdocking.h $(HOST_SRC_DIR)/performdocking.cpp
+
+all: otool odock
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+check-env-cpu:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 206):
+	@if test -z "$$CPU_INCLUDE_PATH"; then \
+		echo "CPU_INCLUDE_PATH is undefined"; \
+	else \
+		echo "CPU_INCLUDE_PATH is set to $$CPU_INCLUDE_PATH"; \
+	fi; \
+	if test -z "$$CPU_LIBRARY_PATH"; then \
+		echo "CPU_LIBRARY_PATH is undefined"; \
+	else \
+		echo "CPU_LIBRARY_PATH is set to $$CPU_LIBRARY_PATH"; \
+	fi; \
+	echo " "
+
+stringify:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 255):
+	./stringify_ocl_krnls.sh
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+check-env-all: check-env-dev check-env-cpu check-env-gpu
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-09-07 14:06:44.858616871
+#  File has been updated.
+#  Successfully updated.
+
+link-code:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 248):
+	ln -sf performdocking.h.OpenCL $(HOST_INC_DIR)/performdocking.h
+	ln -sf performdocking.cpp.OpenCL $(HOST_SRC_DIR)/performdocking.cpp
+
+test: odock
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 287):
+	$(BIN_DIR)/$(TARGET) \
+	-ffile ./input/$(PDB)/derived/$(PDB)_protein.maps.fld \
+	-lfile ./input/$(PDB)/derived/$(PDB)_ligand.pdbqt \
+	-nrun $(NRUN) \
+	-ngen $(NGEN) \
+	-psize $(POPSIZE) \
+	-resnam $(TESTNAME) \
+	-gfpop 0 \
+	-lsmet $(TESTLS)
+
+check-env-dev:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 188):
+	@if test -z "$$DEVICE"; then \
+		echo "Please set DEVICE to either CPU, GPU, CUDA, or OCLGPU to build docking software."; \
+		exit 1; \
+	else \
+		if [ "$$DEVICE" = "CPU" ]; then \
+			echo "DEVICE is set to $$DEVICE"; \
+		else \
+			if [ "$$DEVICE" = "GPU" ]; then \
+				echo "DEVICE is set to $$DEVICE"; \
+			else \
+				echo "DEVICE value is invalid. Please set DEVICE to either CPU, GPU, CUDA, or OCLGPU"; \
+				exit 1; \
+			fi; \
+		fi; \
+	fi; \
+	echo " "
+
+check-env-gpu:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 219):
+	@if test -z "$$GPU_INCLUDE_PATH"; then \
+		echo "GPU_INCLUDE_PATH is undefined"; \
+	else \
+		echo "GPU_INCLUDE_PATH is set to $$GPU_INCLUDE_PATH"; \
+	fi; \
+	if test -z "$$GPU_LIBRARY_PATH"; then \
+		echo "GPU_LIBRARY_PATH is undefined"; \
+	else \
+		echo "GPU_LIBRARY_PATH is set to $$GPU_LIBRARY_PATH"; \
+	fi; \
+	echo " "
+
+astex: odock
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 304):
+	$(BIN_DIR)/$(TARGET) \
+	-ffile ./input_tsri/search-set-astex/$(ASTEX_PDB)/protein.maps.fld \
+	-lfile ./input_tsri/search-set-astex/$(ASTEX_PDB)/flex-xray.pdbqt \
+	-nrun $(ASTEX_NRUN) \
+	-psize $(ASTEX_POPSIZE) \
+	-resnam $(ASTEX_TESTNAME) \
+	-gfpop 1 \
+	-lsmet $(ASTEX_LS)
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 316):
+	rm -f $(HOST_INC_DIR)/performdocking.h $(HOST_SRC_DIR)/performdocking.cpp
+
+# Not a target:
+Makefile.OpenCL:
+#  Implicit rule search has been done.
+#  Last modified 2021-09-01 14:39:33.592624643
+#  File has been updated.
+#  Successfully updated.
+
+odock: check-env-all stringify link-code
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile.OpenCL', line 266):
+	@echo "Building" $(TARGET) "..."
+	$(CPP) \
+	$(OCL_SRC) $(shell ls $(HOST_SRC_DIR)/*.cpp) \
+	$(CFLAGS) \
+	$(LIB_OPENCL) \
+	-o$(BIN_DIR)/$(TARGET) \
+	$(DEV) $(NWI) $(PIPELINE) $(OPT) $(DD) $(REP) $(KFLAGS)
+
+otool: unlink-code
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile.OpenCL', line 258):
+	@echo "Building" $(TOOL_TARGET) "..."
+	$(CPP) \
+	$(shell ls $(HOST_SRC_DIR)/*.cpp) \
+	$(TOOL_CFLAGS) \
+	-o$(BIN_DIR)/$(TOOL_TARGET) \
+	$(PIPELINE) $(OPT) -DTOOLMODE $(REP)
+
+# files hash-table stats:
+# Load=17/1024=2%, Rehash=0, Collisions=2/43=5%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 53 / storage = 591 B / avg = 11 B
+# current buf: size = 8162 B / used = 591 B / count = 53 / avg = 11 B
+
+# strcache performance: lookups = 85 / hit rate = 37%
+# hash-table stats:
+# Load=53/8192=1%, Rehash=0, Collisions=4/85=5%
+# Finished Make data base on Sun Sep 12 16:26:35 2021
+
+ 

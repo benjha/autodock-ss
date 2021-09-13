@@ -1,0 +1,46 @@
+AutoDock-GPU version: v1.5.1-dirty
+
+Running 1 docking calculation
+
+Cuda device:                              Quadro RTX 5000
+Available memory on device:               15623 MB (total: 16122 MB)
+
+CUDA Setup time 0.123380s
+
+Running Job #1
+    Using heuristics: (capped) number of evaluations set to 244898
+    Local-search chosen method is: ADADELTA (ad)
+
+Rest of Setup time 0.017855s
+
+Executing docking runs, stopping automatically after either reaching 0.15 kcal/mol standard deviation of
+the best molecules of the last 4 * 5 generations, 42000 generations, or 244898 evaluations:
+
+Generations |  Evaluations |     Threshold    |  Average energy of best 10%  | Samples |    Best energy
+------------+--------------+------------------+------------------------------+---------+-------------------
+          0 |          150 |   65.06 kcal/mol |   22.99 +/-   12.98 kcal/mol |       5 |   -0.45 kcal/mol
+          5 |        29607 |   61.93 kcal/mol |   -1.53 +/-    8.86 kcal/mol |     566 |   -9.89 kcal/mol
+         10 |        56448 |   -1.29 kcal/mol |   -9.74 +/-    0.12 kcal/mol |       8 |   -9.95 kcal/mol
+         15 |        82641 |   -9.51 kcal/mol |   -9.74 +/-    0.14 kcal/mol |      14 |   -9.96 kcal/mol
+         20 |       108471 |   -9.60 kcal/mol |   -9.75 +/-    0.13 kcal/mol |      15 |   -9.97 kcal/mol
+         25 |       133992 |   -9.62 kcal/mol |   -9.78 +/-    0.11 kcal/mol |      19 |  -10.00 kcal/mol
+         30 |       159381 |   -9.69 kcal/mol |   -9.85 +/-    0.08 kcal/mol |      20 |  -10.00 kcal/mol
+         35 |       184728 |   -9.78 kcal/mol |   -9.88 +/-    0.07 kcal/mol |      17 |  -10.00 kcal/mol
+         40 |       210038 |   -9.74 kcal/mol |   -9.90 +/-    0.06 kcal/mol |      19 |  -10.00 kcal/mol
+------------+--------------+------------------+------------------------------+---------+-------------------
+
+                                   Finished evaluation after reaching
+                                   -9.85 +/-    0.09 kcal/mol combined.
+                                75 samples, best energy   -10.00 kcal/mol.
+
+Docking time 1.168368s
+
+Shutdown time 0.000505s
+
+Job #1 took 1.187 sec after waiting 0.131 sec for setup
+
+SMARTREDISADAPTOR: Dataset name: 1stp_ligand.pdbqt_testing
+Run time of entire job set (1 file): 1.401 sec
+Processing time: 0.084 sec
+
+All jobs ran without errors.
