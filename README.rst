@@ -5,7 +5,7 @@ In-situ infraestructure for Autodock-GPU
 Overview
 ========
 
-Smart Autodock enables software infrastructure for in-situ processing (e.g., molecular visualization, dimensionality reduction). In-situ capabilities allow analyzing data on the fly and save to disk only what is needed for further post processing; thus, having the potential to reduce I/O bandwidth and storage needs.
+Smart Autodock is an ongoing effort for in-situ processing (e.g., molecular visualization, dimensionality reduction) of MD simulations. In-situ capabilities allow analyzing data on the fly and save to disk only what is needed for further post-processing; thus, having the potential to reduce I/O bandwidth and storage needs.
 
 Smart Autodock is built on top of Autodock-GPU and Cray's Smartsim. It provides communication and coordination mechanisms for data interchange between the different modules (implemented in C/C++ and python) of this project.
 
@@ -18,3 +18,10 @@ The following diagram provides an overview of Smart Autodock modules. The genera
    :alt: In-situ infraestructure for Autodock-GPU
 
 Autodock-GPU has been extended with the ``cSmartRedisAdaptor`` class to support connecting, sending metadata, and docking steps to the RedisAI database.  ``analysis.py`` is a python script that connects to the RedisAI database to access simulation data for analysis and visualization. Finally, ``driver.py`` controls execution and orchestration. 
+
+
+
+SUMMIT deployment
+=================
+
+TODO
