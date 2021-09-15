@@ -911,6 +911,8 @@ void generate_output(
 			}
 			
 			curr_model = pdbqt_template;
+			// printf ("lineout %s", lineout);
+			// printf ("pdbqt_template %s", pdbqt_template.c_str());
 			// inserting text from the end means prior text positions won't shift
 			// so there's less to keep track off ;-)
 			for(atom_cnt = ligand_ref->num_of_atoms; atom_cnt-->0;)
@@ -1283,7 +1285,7 @@ void process_result(
 	// SmartRedis
 	#ifdef SMARTSIM
 		cSmartRedisAdaptor adaptor(false);
-		adaptor.setStructures(myligand_init, mypars, mygrid);
+		adaptor.setStructures(myligand_init, mypars, mygrid, cpu_result_ligands.data());
 	#endif
 
 	// Do analyses and generate dlg or xml output files
