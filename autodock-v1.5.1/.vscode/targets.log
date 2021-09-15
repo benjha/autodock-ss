@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Sep 12 16:26:35 2021
+# Make data base, printed on Wed Sep 15 10:33:51 2021
 
 # Variables
 
@@ -107,7 +107,7 @@ ASTEX_TESTNAME := test_astex
 # makefile (from 'Makefile.OpenCL', line 56)
 BIN_DIR = ./bin
 # environment
-SESSION_MANAGER = local/fulano:@/tmp/.ICE-unix/1328,unix/fulano:/tmp/.ICE-unix/1328
+SESSION_MANAGER = local/fulano:@/tmp/.ICE-unix/1388,unix/fulano:/tmp/.ICE-unix/1388
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile.OpenCL', line 176)
@@ -133,7 +133,7 @@ LS_COLORS =
 # environment
 XDG_SESSION_DESKTOP = xfce
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-FHL2kH4EGIXI/agent.1328
+SSH_AUTH_SOCK = /tmp/ssh-He22g4YHjOyq/agent.1388
 # automatic
 %F = $(notdir $%)
 # environment
@@ -155,7 +155,7 @@ KCMN_DIR = $(COMMON_DIR)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1389
+SSH_AGENT_PID = 1448
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
 # makefile (from 'Makefile.OpenCL', line 53)
@@ -205,7 +205,7 @@ CONFIG = RELEASE
 # makefile (from 'Makefile.OpenCL', line 82)
 KFLAGS = -DKRNL_SOURCE=$(KRNL_DIR)/$(KRNL_MAIN) -DKRNL_DIRECTORY=$(KRNL_DIR) -DKCMN_DIRECTORY=$(KCMN_DIR) $(K_NAMES)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-61445ca3-6b2c-46c9-b677-9ba5695ef9cc.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-feef04c8-dbd0-4b9d-b17e-ff61135d3bec.sock
 # makefile (from 'Makefile.OpenCL', line 61)
 IFLAGS = -I$(COMMON_DIR) -I$(OCL_INC_DIR) -I$(HOST_INC_DIR) -I$(KRNL_DIR) -I$(OCLA_INC_PATH)
 # environment
@@ -257,7 +257,7 @@ BREAKPAD_DUMP_LOCATION = /home/benjha/.config/Code/exthost Crash Reports
 # environment
 GDK_BACKEND = x11
 # makefile (from 'Makefile.OpenCL', line 236)
-GIT_VERSION := v1.5.1-dirty
+GIT_VERSION := b81b5931a1f90a168cb88ee8ea9a0335c6cba5a2-dirty
 # automatic
 +F = $(notdir $+)
 # makefile (from 'Makefile.OpenCL', line 73)
@@ -279,12 +279,12 @@ TEST_CUDA := yes
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # makefile (from 'Makefile.OpenCL', line 239)
+ 
 TOOL_CFLAGS = -std=c++11 -I$(COMMON_DIR) -I$(HOST_INC_DIR) -DVERSION=\"$(GIT_VERSION)\"
 # makefile (from 'Makefile.OpenCL', line 49)
 COMMON_DIR = ./common
 # environment
 LC_ALL = C
- 
 # makefile (from 'Makefile.OpenCL', line 299)
 ASTEX_POPSIZE := 10
 # environment
@@ -310,7 +310,7 @@ LANG = C
 # makefile (from 'Makefile.OpenCL', line 77)
 K5_NAME = "gradient_minSD"
 # environment
-VSCODE_PID = 12474
+VSCODE_PID = 2057
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
@@ -322,9 +322,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 2055, inode 5772501): 36 files, no impossibilities.
+# . (device 2055, inode 5772501): 35 files, no impossibilities.
 
-# 36 files, no impossibilities in 1 directories.
+# 35 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -542,12 +542,12 @@ otool: unlink-code
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 53 / storage = 591 B / avg = 11 B
-# current buf: size = 8162 B / used = 591 B / count = 53 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 52 / storage = 615 B / avg = 11 B
+# current buf: size = 8162 B / used = 615 B / count = 52 / avg = 11 B
 
-# strcache performance: lookups = 85 / hit rate = 37%
+# strcache performance: lookups = 84 / hit rate = 38%
 # hash-table stats:
-# Load=53/8192=1%, Rehash=0, Collisions=4/85=5%
-# Finished Make data base on Sun Sep 12 16:26:35 2021
+# Load=52/8192=1%, Rehash=0, Collisions=4/84=5%
+# Finished Make data base on Wed Sep 15 10:33:51 2021
 
  

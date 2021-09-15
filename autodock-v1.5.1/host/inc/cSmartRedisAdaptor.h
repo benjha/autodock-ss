@@ -18,8 +18,8 @@ public:
     {
         // Initialize a SmartRedis client
         // false - no redis cluster
-        client  = new SmartRedis::Client(cluster);
-        //dataset = new SmartRedis::DataSet();
+        // client  = new SmartRedis::Client(cluster);
+        // dataset = new SmartRedis::DataSet();
     }
 
     void setStructures (const Liganddata* _ligand, const Dockpars* _pars, const Gridinfo* _grid)
@@ -34,9 +34,11 @@ public:
         std::string dataSetName = tmp.substr( tmp.find_last_of("/") + 1 ) + "_" + "testing";
         printf("SMARTREDISADAPTOR: Dataset name: %s\n", dataSetName.data());
 
-        dataset = new SmartRedis::DataSet(dataSetName);
-        setMetaData();
-        
+        //dataset = new SmartRedis::DataSet(dataSetName);
+        //setMetaData();
+        setTimeSteps ();
+        //client->put_dataset((SmartRedis::DataSet &)*dataset);
+
     }
 
     ~cSmartRedisAdaptor()
@@ -72,7 +74,7 @@ private:
         dataset->add_meta_scalar("max_local_search_it", &pars->max_num_of_iters,    SmartRedis::MetaDataType::uint64);
         dataset->add_meta_scalar("rho_lower_bond",      &pars->rho_lower_bound,     SmartRedis::MetaDataType::flt);
         dataset->add_meta_scalar("cons_limit",          &pars->cons_limit,          SmartRedis::MetaDataType::uint64);
-        dataset->add_meta_scalar("rmsd_tolerance",      &pars->rmsd_tolerance,     SmartRedis::MetaDataType::flt);
+        dataset->add_meta_scalar("rmsd_tolerance",      &pars->rmsd_tolerance,      SmartRedis::MetaDataType::flt);
         
         double delta_mov        = pars->abs_max_dmov*grid->spacing;
         double delta_mov_spread = pars->base_dmov_mul_sqrt3*grid->spacing/sqrt(3.0);
@@ -86,8 +88,58 @@ private:
                                     SmartRedis::MetaDataType::dbl);
         dataset->add_meta_scalar("handled_symmetry", &pars->handle_symmetry,
                                     SmartRedis::MetaDataType::int32);
+    }
+
+    void setTimeSteps ()
+    {
+        //char tempstr [256];
+        //char lineout [264];
+        unsigned int line_count = 0;
+        std::string pdbqt_template;
+        std::string tmpStr, lineout, inputLigand;
+        std::vector<unsigned int> atom_data;
+
+        while (line_count < ligand->ligand_line_count)
+		{
+            // extracts ligand's contents from file
+			// strcpy(tempstr,ligand->file_content[line_count].c_str());
+            tmpStr = ligand->file_content[line_count++];
+            inputLigand = tmpStr;
+			printf("<SMARTREDISADAPTOR> INPUT LIGAND PDBQT FILE: %s", tmpStr.c_str());
+            // creates a template to then be filled with atom x,y,z positions
+            if ( !tmpStr.compare(0,4,"ATOM") || !tmpStr.compare(0,6,"HETATM"))
+			{
+                // check field sizes on
+                // https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/tutorials/pdbintro.html
+                pdbqt_template.append(tmpStr, 0, 30);
+                pdbqt_template+="\n";
+				atom_data.push_back(pdbqt_template.length());
+			} else{
+                if ( !tmpStr.compare(0,4,"ROOT"))
+				{
+					pdbqt_template += "USER                              x       y       z     vdW  Elec       q    Type\n";
+					pdbqt_template += "USER                           _______ _______ _______ _____ _____    ______ ____\n";
+				}
+                pdbqt_template += tmpStr;
+			}
+            //printf ("SMARTREDISADAPTOR: pdbqt_template length %lu\n", pdbqt_template.length());
+		}
+
+        std::string tensorName = "input_ligand";
         
-        client->put_dataset((SmartRedis::DataSet &)*dataset);
+        // printf("SMARTREDISADAPTOR: line_count %d\n",line_count); 
+        // printf("\n<SMARTREDISADAPTOR> pdbqt_template %s\n",pdbqt_template.c_str()); 
+        // dataset->add_tensor(tensorName, inputLigand)
+
+        for (int i=0; i<pars->num_of_runs; i++)
+		{
+            std::string timeStep = std::to_string(i+1);
+            tensorName = "time_step_"  + timeStep + "\n";
+            tmpStr += "MODEL         " + timeStep + "\n";
+            tmpStr += "USER    Run = " + timeStep + "\n";
+            tmpStr += "USER\n";
+        }
+        printf("\n<SMARTREDISADAPTOR> tmpStr %s\n", tmpStr.c_str());
     }
 };
 

@@ -5,7 +5,7 @@ export PATH=$CUDA_DIR/bin:$PATH
 export GPU_INCLUDE_PATH=$CUDA_DIR/include
 export GPU_LIBRARY_PATH=$CUDA_DIR/lib64
 
-SMARTREDIS_PATH=$HOME/code/nbvl/smartsim/smartredis/install
+SMARTREDIS_PATH=$HOME/code/nbvl/smartsim/SmartRedis/install
 export SMARTREDIS_INCLUDE_PATH=$SMARTREDIS_PATH/include
 export SMARTREDIS_LIBRARY_PATH=$SMARTREDIS_PATH/lib
 

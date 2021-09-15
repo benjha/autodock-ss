@@ -5,7 +5,7 @@ rm -f ./host/inc/performdocking.h ./host/src/performdocking.cpp
 echo "Building" adgpu_analysis "..."
 g++ \
 ./host/src/calcenergy.cpp ./host/src/getparameters.cpp ./host/src/main.cpp ./host/src/miscellaneous.cpp ./host/src/performdocking.cpp ./host/src/processgrid.cpp ./host/src/processligand.cpp ./host/src/processresult.cpp ./host/src/setup.cpp \
--std=c++11 -I./common -I./host/inc -DVERSION=\"v1.5.1-dirty\" \
+-std=c++11 -I./common -I./host/inc -DVERSION=\"b81b5931a1f90a168cb88ee8ea9a0335c6cba5a2-dirty\" \
 -o./bin/adgpu_analysis \
  -O3 -DTOOLMODE 
 if test -z "$DEVICE"; then \
@@ -52,7 +52,7 @@ ln -sf performdocking.cpp.OpenCL ./host/src/performdocking.cpp
 echo "Building" autodock "..."
 g++ \
 ./wrapcl/src/BufferObjects.cpp ./wrapcl/src/CommandQueues.cpp ./wrapcl/src/Programs.cpp ./wrapcl/src/Kernels.cpp ./wrapcl/src/Devices.cpp ./wrapcl/src/ImportSource.cpp ./wrapcl/src/Platforms.cpp ./wrapcl/src/Contexts.cpp ./wrapcl/src/ImportBinary.cpp ./wrapcl/src/listAttributes.cpp ./host/src/calcenergy.cpp ./host/src/getparameters.cpp ./host/src/main.cpp ./host/src/miscellaneous.cpp ./host/src/performdocking.cpp ./host/src/processgrid.cpp ./host/src/processligand.cpp ./host/src/processresult.cpp ./host/src/setup.cpp \
--std=c++11 -I./common -I./wrapcl/inc -I./host/inc -I./device -I -L -DVERSION=\"v1.5.1-dirty\" \
+-std=c++11 -I./common -I./wrapcl/inc -I./host/inc -I./device -I -L -DVERSION=\"b81b5931a1f90a168cb88ee8ea9a0335c6cba5a2-dirty\" \
 -lOpenCL \
 -o./bin/autodock \
    -O3   -DKRNL_SOURCE=./device/calcenergy.cl -DKRNL_DIRECTORY=./device -DKCMN_DIRECTORY=./common -DK1="gpu_calc_initpop" -DK2="gpu_sum_evals" -DK3="perform_LS" -DK4="gpu_gen_and_eval_newpops" -DK5="gradient_minSD" -DK6="gradient_minFire" -DK7="gradient_minAD"

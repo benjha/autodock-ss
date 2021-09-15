@@ -1,0 +1,6 @@
+[submodule "smartsim/SmartRedis"]
+	path = smartsim/SmartRedis
+	url = https://github.com/CrayLabs/SmartRedis.git
+[submodule "smartsim/--depth=1"]
+	path = smartsim/--depth=1
+	url = https://github.com/CrayLabs/SmartRedis.git
