@@ -103,28 +103,30 @@ private:
         std::vector<unsigned int> atom_data;
 
         while (line_count < ligand->ligand_line_count)
-		{
+        {
             // extracts ligand's contents from file
-			// strcpy(tempstr,ligand->file_content[line_count].c_str());
+            // strcpy(tempstr,ligand->file_content[line_count].c_str());
             tmpStr = ligand->file_content[line_count++];
             inputLigand += tmpStr;
             // creates a template to then be filled with atom x,y,z positions
             if ( !tmpStr.compare(0,4,"ATOM") || !tmpStr.compare(0,6,"HETATM"))
-			{
+            {
                 // check field sizes on
                 // https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/tutorials/pdbintro.html
                 pdbqt_template.append(tmpStr, 0, 30);
                 atom_data.push_back(pdbqt_template.length());
-			} else{
+            }
+            else
+            {
                 if ( !tmpStr.compare(0,4,"ROOT"))
-				{
-					pdbqt_template += "USER                              x       y       z     vdW  Elec       q    Type\n";
-					pdbqt_template += "USER                           _______ _______ _______ _____ _____    ______ ____\n";
-				}
+                {
+                    pdbqt_template += "USER                              x       y       z     vdW  Elec       q    Type\n";
+                    pdbqt_template += "USER                           _______ _______ _______ _____ _____    ______ ____\n";
+                }
                 pdbqt_template += tmpStr;
-			}
+            }
             //printf ("SMARTREDISADAPTOR: pdbqt_template length %lu\n", pdbqt_template.length());
-		}
+            }
         std::string tensorName = "input_ligand";
         // printf("SMARTREDISADAPTOR: line_count %d\n",line_count); 
         // printf("\n<SMARTREDISADAPTOR> pdbqt_template %s\n",pdbqt_template.c_str()); 
@@ -136,20 +138,19 @@ private:
         dataset->add_tensor(tensorName, (void*)inputLigand.c_str(), tensorSize, SmartRedis::TensorType::uint8, SmartRedis::MemoryLayout::contiguous);
         
         for (int i=0; i<pars->num_of_runs; i++)
-		{
+        {
             std::string dt = std::to_string(i+1);
             tensorName = "time_step_"  + dt + "\n";
             tmpStr =  "MODEL         " + dt + "\n";
             tmpStr += "USER    Run = " + dt + "\n";
             tmpStr += "USER\n";
-
-            //printf("\n<SMARTREDISADAPTOR> atom_data %d ligand_ref->num_of_atoms %d", atom_data.size(), ligand->num_of_atoms);
             
+            //printf("\n<SMARTREDISADAPTOR> atom_data %d ligand_ref->num_of_atoms %d", atom_data.size(), ligand->num_of_atoms);
             dockedModel = pdbqt_template;
-			// inserting text from the end means prior text positions won't shift
-			// so there's less to keep track off ;-)
-			for(atom_cnt = ligand->num_of_atoms; atom_cnt-->0;)
-			{
+            // inserting text from the end means prior text positions won't shift
+            // so there's less to keep track off ;-)
+            for(atom_cnt = ligand->num_of_atoms; atom_cnt-->0;)
+            {
                 //char* line = new  ;
                 std::stringstream ss;
                 ss << std::fixed << std::setw(8) << std::setprecision(3) << results[i].atom_idxyzq[atom_cnt][1];
@@ -163,7 +164,7 @@ private:
                     << results[i].atom_idxyzq[atom_cnt][4]; // q
                 ss << " " << std::setw(2) << std::left << ligand->atom_types[((int)results[i].atom_idxyzq[atom_cnt][0])] << "\n"; // type
                 dockedModel.insert(atom_data[atom_cnt],ss.str());
-			}
+            }
             tmpStr+=dockedModel.c_str();
             //dataset->add_tensor(tensorName, tmpStr.c_str(), tmpStr.size(), SmartRedis::TensorType::uint8, SmartRedis::MemoryLayout::contiguous);       
         }
