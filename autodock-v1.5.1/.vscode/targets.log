@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Sep 15 10:33:51 2021
+# Make data base, printed on Wed Sep 22 18:25:50 2021
 
 # Variables
 
@@ -107,7 +107,7 @@ ASTEX_TESTNAME := test_astex
 # makefile (from 'Makefile.OpenCL', line 56)
 BIN_DIR = ./bin
 # environment
-SESSION_MANAGER = local/fulano:@/tmp/.ICE-unix/1388,unix/fulano:/tmp/.ICE-unix/1388
+SESSION_MANAGER = local/fulano:@/tmp/.ICE-unix/1319,unix/fulano:/tmp/.ICE-unix/1319
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile.OpenCL', line 176)
@@ -133,7 +133,7 @@ LS_COLORS =
 # environment
 XDG_SESSION_DESKTOP = xfce
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-He22g4YHjOyq/agent.1388
+SSH_AUTH_SOCK = /tmp/ssh-7WQjOH29OU3p/agent.1319
 # automatic
 %F = $(notdir $%)
 # environment
@@ -155,7 +155,7 @@ KCMN_DIR = $(COMMON_DIR)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1448
+SSH_AGENT_PID = 1380
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
 # makefile (from 'Makefile.OpenCL', line 53)
@@ -169,7 +169,7 @@ LD_LIBRARY_PATH = /usr/local/cuda-10.0/lib64:
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
-VSCODE_CODE_CACHE_PATH = /home/benjha/.config/Code/CachedData/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff
+VSCODE_CODE_CACHE_PATH = /home/benjha/.config/Code/CachedData/83bd43bc519d15e50c4272c6cf5c1479df196a4d
 # environment
 LOGNAME = benjha
 # environment
@@ -205,7 +205,7 @@ CONFIG = RELEASE
 # makefile (from 'Makefile.OpenCL', line 82)
 KFLAGS = -DKRNL_SOURCE=$(KRNL_DIR)/$(KRNL_MAIN) -DKRNL_DIRECTORY=$(KRNL_DIR) -DKCMN_DIRECTORY=$(KCMN_DIR) $(K_NAMES)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-feef04c8-dbd0-4b9d-b17e-ff61135d3bec.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1478ce76-2528-4bca-bde7-5ffa5d7d7d61.sock
 # makefile (from 'Makefile.OpenCL', line 61)
 IFLAGS = -I$(COMMON_DIR) -I$(OCL_INC_DIR) -I$(HOST_INC_DIR) -I$(KRNL_DIR) -I$(OCLA_INC_PATH)
 # environment
@@ -239,7 +239,7 @@ LANGUAGE = en_US
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-cae27ba7-1.60.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-cae27ba7-1.60.1-main.sock
 # environment
 PANEL_GDK_CORE_DEVICE_EVENTS = 0
 # makefile (from 'Makefile.OpenCL', line 181)
@@ -257,7 +257,7 @@ BREAKPAD_DUMP_LOCATION = /home/benjha/.config/Code/exthost Crash Reports
 # environment
 GDK_BACKEND = x11
 # makefile (from 'Makefile.OpenCL', line 236)
-GIT_VERSION := b81b5931a1f90a168cb88ee8ea9a0335c6cba5a2-dirty
+GIT_VERSION := 3f97d4b1400a2a6386f522dccf25a1ea0d57cbbc-dirty
 # automatic
 +F = $(notdir $+)
 # makefile (from 'Makefile.OpenCL', line 73)
@@ -279,7 +279,6 @@ TEST_CUDA := yes
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # makefile (from 'Makefile.OpenCL', line 239)
- 
 TOOL_CFLAGS = -std=c++11 -I$(COMMON_DIR) -I$(HOST_INC_DIR) -DVERSION=\"$(GIT_VERSION)\"
 # makefile (from 'Makefile.OpenCL', line 49)
 COMMON_DIR = ./common
@@ -292,6 +291,7 @@ CONDA_PYTHON_EXE = /home/benjha/Programs/miniconda3/bin/python
 # makefile (from 'Makefile.OpenCL', line 52)
 HOST_INC_DIR = ./host/inc
 # automatic
+ 
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
@@ -310,7 +310,7 @@ LANG = C
 # makefile (from 'Makefile.OpenCL', line 77)
 K5_NAME = "gradient_minSD"
 # environment
-VSCODE_PID = 2057
+VSCODE_PID = 17701
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
@@ -548,6 +548,6 @@ otool: unlink-code
 # strcache performance: lookups = 84 / hit rate = 38%
 # hash-table stats:
 # Load=52/8192=1%, Rehash=0, Collisions=4/84=5%
-# Finished Make data base on Wed Sep 15 10:33:51 2021
+# Finished Make data base on Wed Sep 22 18:25:50 2021
 
  

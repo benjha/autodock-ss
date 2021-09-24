@@ -15,4 +15,5 @@ inputLigand = dataset.get_tensor("input_ligand")
 
 print(inputLigand)
 
-print ("".join([chr(char) for char in inputLigand]))
+str = "".join([chr(char) for char in inputLigand])
+print(str)

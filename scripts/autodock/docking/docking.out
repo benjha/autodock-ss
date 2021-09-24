@@ -3,45 +3,45 @@ AutoDock-GPU version: ea7a56ef80683baa9d126171ab6f120af69d13ff-dirty
 Running 1 docking calculation
 
 Cuda device:                              Quadro RTX 5000
-Available memory on device:               15553 MB (total: 16122 MB)
+Available memory on device:               15594 MB (total: 16122 MB)
 
-CUDA Setup time 0.094449s
+CUDA Setup time 0.337180s
 
 Running Job #1
     Using heuristics: (capped) number of evaluations set to 244898
     Local-search chosen method is: ADADELTA (ad)
 
-Rest of Setup time 0.017821s
+Rest of Setup time 0.019565s
 
 Executing docking runs, stopping automatically after either reaching 0.15 kcal/mol standard deviation of
 the best molecules of the last 4 * 5 generations, 42000 generations, or 244898 evaluations:
 
 Generations |  Evaluations |     Threshold    |  Average energy of best 10%  | Samples |    Best energy
 ------------+--------------+------------------+------------------------------+---------+-------------------
-          0 |          150 |    8.28 kcal/mol |    2.88 +/-    1.44 kcal/mol |       4 |    1.09 kcal/mol
-          5 |        29671 |    8.28 kcal/mol |   -4.52 +/-    3.11 kcal/mol |     485 |   -9.71 kcal/mol
-         10 |        56383 |   -4.43 kcal/mol |   -9.36 +/-    0.19 kcal/mol |      17 |   -9.83 kcal/mol
-         15 |        82380 |   -9.19 kcal/mol |   -9.48 +/-    0.19 kcal/mol |      22 |   -9.94 kcal/mol
-         20 |       108109 |   -9.35 kcal/mol |   -9.75 +/-    0.16 kcal/mol |      24 |  -10.01 kcal/mol
-         25 |       133603 |   -9.65 kcal/mol |   -9.83 +/-    0.11 kcal/mol |      20 |  -10.01 kcal/mol
-         30 |       159163 |   -9.75 kcal/mol |   -9.91 +/-    0.08 kcal/mol |      24 |  -10.03 kcal/mol
-         35 |       184596 |   -9.86 kcal/mol |   -9.97 +/-    0.06 kcal/mol |      15 |  -10.06 kcal/mol
-         40 |       209975 |   -9.82 kcal/mol |   -9.96 +/-    0.05 kcal/mol |      19 |  -10.06 kcal/mol
-         45 |       235349 |   -9.85 kcal/mol |   -9.95 +/-    0.07 kcal/mol |      19 |  -10.06 kcal/mol
-         47 |       245545 |   -9.84 kcal/mol |  -10.01 +/-    0.04 kcal/mol |      21 |  -10.06 kcal/mol
+          0 |          150 |   12.88 kcal/mol |    1.62 +/-    3.00 kcal/mol |       4 |   -1.58 kcal/mol
+          5 |        29772 |   12.88 kcal/mol |   -4.32 +/-    3.38 kcal/mol |     534 |   -9.30 kcal/mol
+         10 |        56565 |   -4.23 kcal/mol |   -9.29 +/-    0.17 kcal/mol |      16 |   -9.82 kcal/mol
+         15 |        82553 |   -9.13 kcal/mol |   -9.34 +/-    0.17 kcal/mol |      20 |   -9.85 kcal/mol
+         20 |       108201 |   -9.21 kcal/mol |   -9.47 +/-    0.17 kcal/mol |      30 |   -9.87 kcal/mol
+         25 |       133745 |   -9.39 kcal/mol |   -9.68 +/-    0.14 kcal/mol |      25 |   -9.90 kcal/mol
+         30 |       159068 |   -9.60 kcal/mol |   -9.78 +/-    0.09 kcal/mol |      23 |   -9.93 kcal/mol
+         35 |       184393 |   -9.72 kcal/mol |   -9.85 +/-    0.09 kcal/mol |      17 |  -10.00 kcal/mol
+         40 |       209618 |   -9.77 kcal/mol |   -9.89 +/-    0.07 kcal/mol |      17 |  -10.01 kcal/mol
+         45 |       234916 |   -9.76 kcal/mol |   -9.87 +/-    0.07 kcal/mol |      16 |  -10.01 kcal/mol
+         47 |       245075 |   -9.73 kcal/mol |   -9.93 +/-    0.04 kcal/mol |      21 |  -10.01 kcal/mol
 ------------+--------------+------------------+------------------------------+---------+-------------------
 
                                    Finished evaluation after reaching
-                           245545 evaluations. Best energy   -10.06 kcal/mol.
+                           245075 evaluations. Best energy   -10.01 kcal/mol.
 
-Docking time 1.373277s
+Docking time 1.416567s
 
-Shutdown time 0.000531s
+Shutdown time 0.000606s
 
-Job #1 took 1.392 sec after waiting 0.102 sec for setup
+Job #1 took 1.437 sec after waiting 0.361 sec for setup
 
 <SMARTREDISADAPTOR> Dataset name: 1stp_ligand.pdbqt_testing
-Run time of entire job set (1 file): 1.585 sec
+Run time of entire job set (1 file): 1.889 sec
 Processing time: 0.091 sec
 
 All jobs ran without errors.
