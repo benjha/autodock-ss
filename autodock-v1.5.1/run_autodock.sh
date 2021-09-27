@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export AUTODOCK_DIR=$HOME/code/nbvl/autodock-v1.5.1
+export AUTODOCK_DIR=$HOME/code/nvbl/autodock-v1.5.1
 
-SMARTREDIS_PATH=$HOME/code/nbvl/smartsim/smartredis/install
+SMARTREDIS_PATH=$HOME/code/nvbl/smartsim/smartredis/install
 export LD_LIBRARY_PATH=$SMARTREDIS_PATH/lib:$LD_LIBRARY_PATH
 
 $AUTODOCK_DIR/bin/autodock_gpu_256wi \

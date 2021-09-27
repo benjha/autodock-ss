@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/benjha/code/nbvl/smartsim/SmartRedis/install/include/**"
+                "/home/benjha/code/nvbl/smartsim/SmartRedis/install/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Sep 22 18:25:50 2021
+# Make data base, printed on Mon Sep 27 16:39:51 2021
 
 # Variables
 
@@ -45,7 +45,7 @@ GDMSESSION = xfce
 # default
 MAKE_VERSION := 4.2.1
 # makefile
-CURDIR := /home/benjha/code/nbvl/autodock-v1.5.1
+CURDIR := /home/benjha/code/nvbl/autodock-v1.5.1
 # makefile
 SHELL = /bin/sh
 # makefile (from 'Makefile.OpenCL', line 95)
@@ -107,7 +107,7 @@ ASTEX_TESTNAME := test_astex
 # makefile (from 'Makefile.OpenCL', line 56)
 BIN_DIR = ./bin
 # environment
-SESSION_MANAGER = local/fulano:@/tmp/.ICE-unix/1319,unix/fulano:/tmp/.ICE-unix/1319
+SESSION_MANAGER = local/fulano:@/tmp/.ICE-unix/2091,unix/fulano:/tmp/.ICE-unix/2091
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from 'Makefile.OpenCL', line 176)
@@ -133,7 +133,7 @@ LS_COLORS =
 # environment
 XDG_SESSION_DESKTOP = xfce
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-7WQjOH29OU3p/agent.1319
+SSH_AUTH_SOCK = /tmp/ssh-IJuzTi0iWeZR/agent.2091
 # automatic
 %F = $(notdir $%)
 # environment
@@ -147,7 +147,7 @@ OPT = -O3
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/benjha/code/nbvl/autodock-v1.5.1
+PWD = /home/benjha/code/nvbl/autodock-v1.5.1
 # makefile (from 'Makefile.OpenCL', line 55)
 KCMN_DIR = $(COMMON_DIR)
 # default
@@ -155,7 +155,7 @@ KCMN_DIR = $(COMMON_DIR)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1380
+SSH_AGENT_PID = 2151
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
 # makefile (from 'Makefile.OpenCL', line 53)
@@ -205,7 +205,7 @@ CONFIG = RELEASE
 # makefile (from 'Makefile.OpenCL', line 82)
 KFLAGS = -DKRNL_SOURCE=$(KRNL_DIR)/$(KRNL_MAIN) -DKRNL_DIRECTORY=$(KRNL_DIR) -DKCMN_DIRECTORY=$(KCMN_DIR) $(K_NAMES)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1478ce76-2528-4bca-bde7-5ffa5d7d7d61.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9061a11d-60c5-4dca-af56-88dfeac7293c.sock
 # makefile (from 'Makefile.OpenCL', line 61)
 IFLAGS = -I$(COMMON_DIR) -I$(OCL_INC_DIR) -I$(HOST_INC_DIR) -I$(KRNL_DIR) -I$(OCLA_INC_PATH)
 # environment
@@ -257,7 +257,7 @@ BREAKPAD_DUMP_LOCATION = /home/benjha/.config/Code/exthost Crash Reports
 # environment
 GDK_BACKEND = x11
 # makefile (from 'Makefile.OpenCL', line 236)
-GIT_VERSION := 3f97d4b1400a2a6386f522dccf25a1ea0d57cbbc-dirty
+GIT_VERSION := 3d1d2fb24be3f20d8e491e9f400c7df2507a7515-dirty
 # automatic
 +F = $(notdir $+)
 # makefile (from 'Makefile.OpenCL', line 73)
@@ -290,8 +290,8 @@ ASTEX_POPSIZE := 10
 CONDA_PYTHON_EXE = /home/benjha/Programs/miniconda3/bin/python
 # makefile (from 'Makefile.OpenCL', line 52)
 HOST_INC_DIR = ./host/inc
-# automatic
  
+# automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
@@ -310,7 +310,7 @@ LANG = C
 # makefile (from 'Makefile.OpenCL', line 77)
 K5_NAME = "gradient_minSD"
 # environment
-VSCODE_PID = 17701
+VSCODE_PID = 5607
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
@@ -548,6 +548,6 @@ otool: unlink-code
 # strcache performance: lookups = 84 / hit rate = 38%
 # hash-table stats:
 # Load=52/8192=1%, Rehash=0, Collisions=4/84=5%
-# Finished Make data base on Wed Sep 22 18:25:50 2021
+# Finished Make data base on Mon Sep 27 16:39:51 2021
 
  

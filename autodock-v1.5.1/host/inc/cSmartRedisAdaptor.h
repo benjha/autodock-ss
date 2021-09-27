@@ -11,6 +11,8 @@
 #include "getparameters.h"
 #include "processresult.h"
 
+//#define DEBUG_SMARTSIM
+
 class cSmartRedisAdaptor {
 
 public:
@@ -21,7 +23,9 @@ public:
     {
         // Initialize a SmartRedis client
         // false - no redis cluster
+#ifndef DEBUG_SMARTSIM
         client  = new SmartRedis::Client(cluster);
+#endif
     }
 
     void setStructures (const Liganddata* _ligand, const Dockpars* _pars, const Gridinfo* _grid, const Ligandresult* _results)
@@ -35,13 +39,16 @@ public:
         // meanwhile using filename + my suffix
         std::string tmp(pars->ligandfile);
         std::string dataSetName = tmp.substr( tmp.find_last_of("/") + 1 ) + "_" + "testing";
-        printf("<SMARTREDISADAPTOR> Dataset name: %s\n", dataSetName.data());
 
+        printf("<SMARTREDISADAPTOR> Dataset name: %s\n", dataSetName.data());
+#ifndef DEBUG_SMARTSIM
         dataset = new SmartRedis::DataSet(dataSetName);
+#endif
         setMetaData();
         setTimeSteps ();
+#ifndef DEBUG_SMARTSIM        
         client->put_dataset((SmartRedis::DataSet &)*dataset);
-
+#endif
     }
 
     ~cSmartRedisAdaptor()
@@ -63,6 +70,7 @@ private:
 
     void setMetaData ()
     {
+#ifndef DEBUG_SMARTSIM
         dataset->add_meta_string("ligand_file",         std::string(pars->ligandfile));
         dataset->add_meta_string("grid_fld_file",       std::string(pars->fldfile));
         
@@ -79,11 +87,11 @@ private:
         dataset->add_meta_scalar("rho_lower_bond",      &pars->rho_lower_bound,     SmartRedis::MetaDataType::flt);
         dataset->add_meta_scalar("cons_limit",          &pars->cons_limit,          SmartRedis::MetaDataType::uint64);
         dataset->add_meta_scalar("rmsd_tolerance",      &pars->rmsd_tolerance,      SmartRedis::MetaDataType::flt);
-        
+#endif        
         double delta_mov        = pars->abs_max_dmov*grid->spacing;
         double delta_mov_spread = pars->base_dmov_mul_sqrt3*grid->spacing/sqrt(3.0);
         double delta_ang_spread = pars->base_dang_mul_sqrt3/sqrt(3.0);
-
+#ifndef DEBUG_SMARTSIM
         dataset->add_meta_scalar("max_delta_movement",  &delta_mov,
                                     SmartRedis::MetaDataType::dbl);
         dataset->add_meta_scalar("local_search_delta_movement_spread", &delta_mov_spread,
@@ -92,6 +100,7 @@ private:
                                     SmartRedis::MetaDataType::dbl);
         dataset->add_meta_scalar("handled_symmetry", &pars->handle_symmetry,
                                     SmartRedis::MetaDataType::int32);
+#endif
     }
 
     void setTimeSteps ()
@@ -130,13 +139,15 @@ private:
         std::string tensorName = "input_ligand";
         // printf("SMARTREDISADAPTOR: line_count %d\n",line_count); 
         // printf("\n<SMARTREDISADAPTOR> pdbqt_template %s\n",pdbqt_template.c_str()); 
-        std::vector<size_t> tensorSize;
-        tensorSize.push_back(inputLigand.size());
+        std::vector<size_t> vTensorSize;
+        vTensorSize.push_back(inputLigand.size());
         // printf("<SMARTREDISADAPTOR> INPUT LIGAND PDBQT FILE: %s\n", inputLigand.c_str());
         // printf("<SMARTREDISADAPTOR> Putting tensor: %s\n",inputLigand.c_str());
         // printf("<SMARTREDISADAPTOR> Tensor size: %lu\n",inputLigand.size());
-        dataset->add_tensor(tensorName, (void*)inputLigand.c_str(), tensorSize, SmartRedis::TensorType::uint8, SmartRedis::MemoryLayout::contiguous);
-        
+#ifndef DEBUG_SMARTSIM
+        dataset->add_tensor(tensorName, (void*)inputLigand.c_str(), vTensorSize, 
+                            SmartRedis::TensorType::uint8, SmartRedis::MemoryLayout::contiguous);
+#endif
         for (int i=0; i<pars->num_of_runs; i++)
         {
             std::string dt = std::to_string(i+1);
@@ -166,7 +177,14 @@ private:
                 dockedModel.insert(atom_data[atom_cnt],ss.str());
             }
             tmpStr+=dockedModel.c_str();
-            //dataset->add_tensor(tensorName, tmpStr.c_str(), tmpStr.size(), SmartRedis::TensorType::uint8, SmartRedis::MemoryLayout::contiguous);       
+            std::vector<size_t> vTensorSize;
+            vTensorSize.push_back(tmpStr.size());
+            printf ("<SMARTREDISADAPTOR> tensorName: %s\n", tensorName.c_str());
+            printf ("<SMARTREDISADAPTOR> time step: \n %s \n", tmpStr.c_str());
+#ifndef DEBUG_SMARTSIM            
+            dataset->add_tensor(tensorName.c_str(), (void*)tmpStr.c_str(), vTensorSize,
+                                SmartRedis::TensorType::uint8, SmartRedis::MemoryLayout::contiguous);       
+#endif
         }
         //printf("\n<SMARTREDISADAPTOR> tmpStr %s\n", tmpStr.c_str());
 

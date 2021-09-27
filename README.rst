@@ -27,6 +27,7 @@ Autodock-SS is being tested with the following dependencies:
 - Autodock-GPU 1.5.1
 - SmartSim 0.3.2
 - SmartRedis 0.2.0 (redis 3.5.3, redis-py-cluster 2.1.3)
+- OpenBabel/OpenBabel-Python 3.1.1 
 - NGLView 3.0.3
 
 Compilation
@@ -38,7 +39,15 @@ To compile Autodock-SS we added a new flag ``USE_SMARTSIM`` to  Autodock-GPU's m
     
     $make DEVICE=CUDA NUMWI=256 TARGETS=70 USE_SMARTSIM=ON
 
-The script ``make.sh`` in ``autodock-v1.5.1`` directory provides additional details.
+The script ``make.sh`` in ``autodock-v1.5.1`` directory provides additional details. 
+
+It is possible to compile Autodock-SS on adaptor's debug mode by setting the ``DEBUG_SMARTSIM`` flag to ON:
+
+.. code-block:: bash
+
+    $make DEVICE=CUDA NUMWI=256 TARGETS=70 USE_SMARTSIM=ON DEBUG_SMARTSIM=ON
+
+Debug mode allows to enable the ``cSmartRedisAdaptor`` to verify serialization of simulation data is correct but won't connect or send data to SmartRedis.
 
 Data Sharing Strategy
 =====================
