@@ -1,45 +1,47 @@
-AutoDock-GPU version: ea7a56ef80683baa9d126171ab6f120af69d13ff-dirty
+AutoDock-GPU version: 6aede9f3faf165be0f7ad8ccad1e152d080227cb-dirty
 
 Running 1 docking calculation
 
 Cuda device:                              Quadro RTX 5000
-Available memory on device:               15650 MB (total: 16122 MB)
+Available memory on device:               15682 MB (total: 16122 MB)
 
-CUDA Setup time 0.345463s
+CUDA Setup time 0.319998s
 
 Running Job #1
     Using heuristics: (capped) number of evaluations set to 244898
     Local-search chosen method is: ADADELTA (ad)
 
-Rest of Setup time 0.040959s
+Rest of Setup time 0.018742s
 
 Executing docking runs, stopping automatically after either reaching 0.15 kcal/mol standard deviation of
 the best molecules of the last 4 * 5 generations, 42000 generations, or 244898 evaluations:
 
 Generations |  Evaluations |     Threshold    |  Average energy of best 10%  | Samples |    Best energy
 ------------+--------------+------------------+------------------------------+---------+-------------------
-          0 |          150 |   19.41 kcal/mol |    6.56 +/-    3.43 kcal/mol |       4 |    1.22 kcal/mol
-          5 |        29958 |   19.41 kcal/mol |   -3.60 +/-    4.56 kcal/mol |     538 |   -9.40 kcal/mol
-         10 |        56910 |   -3.48 kcal/mol |   -9.07 +/-    0.19 kcal/mol |      30 |   -9.77 kcal/mol
-         15 |        82992 |   -8.97 kcal/mol |   -9.64 +/-    0.20 kcal/mol |      11 |   -9.96 kcal/mol
-         20 |       108676 |   -9.36 kcal/mol |   -9.74 +/-    0.13 kcal/mol |      15 |   -9.99 kcal/mol
-         25 |       134173 |   -9.61 kcal/mol |   -9.81 +/-    0.11 kcal/mol |      13 |   -9.99 kcal/mol
-         30 |       159669 |   -9.69 kcal/mol |   -9.86 +/-    0.06 kcal/mol |      23 |   -9.99 kcal/mol
-         35 |       184997 |   -9.76 kcal/mol |   -9.88 +/-    0.07 kcal/mol |      20 |   -9.99 kcal/mol
+          0 |          150 |   29.19 kcal/mol |   26.10 +/-    0.96 kcal/mol |       5 |   24.51 kcal/mol
+          5 |        29606 |   28.98 kcal/mol |   -2.06 +/-    7.32 kcal/mol |     609 |   -9.65 kcal/mol
+         10 |        56499 |   -1.88 kcal/mol |   -9.43 +/-    0.17 kcal/mol |      18 |   -9.77 kcal/mol
+         15 |        82465 |   -9.28 kcal/mol |   -9.51 +/-    0.13 kcal/mol |      22 |   -9.77 kcal/mol
+         20 |       108135 |   -9.42 kcal/mol |   -9.61 +/-    0.11 kcal/mol |      27 |   -9.83 kcal/mol
+         25 |       133669 |   -9.55 kcal/mol |   -9.75 +/-    0.08 kcal/mol |      22 |   -9.96 kcal/mol
+         30 |       159007 |   -9.69 kcal/mol |   -9.83 +/-    0.07 kcal/mol |      24 |   -9.96 kcal/mol
+         35 |       184333 |   -9.74 kcal/mol |   -9.88 +/-    0.07 kcal/mol |      18 |  -10.00 kcal/mol
+         40 |       209779 |   -9.76 kcal/mol |   -9.93 +/-    0.06 kcal/mol |      19 |  -10.02 kcal/mol
+         45 |       235258 |   -9.82 kcal/mol |   -9.95 +/-    0.04 kcal/mol |      16 |  -10.02 kcal/mol
+         47 |       245468 |   -9.81 kcal/mol |   -9.98 +/-    0.02 kcal/mol |      15 |  -10.02 kcal/mol
 ------------+--------------+------------------+------------------------------+---------+-------------------
 
                                    Finished evaluation after reaching
-                                   -9.83 +/-    0.11 kcal/mol combined.
-                                71 samples, best energy    -9.99 kcal/mol.
+                           245468 evaluations. Best energy   -10.02 kcal/mol.
 
-Docking time 1.040997s
+Docking time 1.358604s
 
-Shutdown time 0.000544s
+Shutdown time 0.000570s
 
-Job #1 took 1.083 sec after waiting 0.392 sec for setup
+Job #1 took 1.378 sec after waiting 0.342 sec for setup
 
 <SMARTREDISADAPTOR> Dataset name: 1stp_ligand.pdbqt_testing
-Run time of entire job set (1 file): 1.562 sec
+Run time of entire job set (1 file): 1.808 sec
 Processing time: 0.088 sec
 
 All jobs ran without errors.

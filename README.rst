@@ -17,19 +17,71 @@ The following diagram provides an overview of Autodock-SS modules. The general d
    :align: center
    :alt: In-situ infraestructure for Autodock-GPU
 
-Autodock-GPU has been extended with the ``cSmartRedisAdaptor`` class to support connecting, sending metadata, and docking steps to the RedisAI database.  ``analysis.py`` is a python script that connects to the RedisAI database to access simulation data for analysis and visualization. Finally, ``driver.py`` controls execution and orchestration. 
+Autodock-GPU has been extended with the ``cSmartRedisAdaptor`` class to support connecting, sending metadata, and docking steps to the RedisAI database.  ``analysis.py`` is a python script that connects to the RedisAI database to access simulation data for analysis and visualization. Finally, ``driver.py`` controls execution and orchestration.
+
+Dependencies
+------------
+
+Autodock-SS is being tested with the following dependencies:
+
+- Autodock-GPU 1.5.1
+- SmartSim 0.3.2
+- SmartRedis 0.2.0 (redis 3.5.3, redis-py-cluster 2.1.3)
+- NGLView 3.0.3
+
+Compilation
+-----------
+
+To compile Autodock-SS we added a new flag ``USE_SMARTSIM`` to  Autodock-GPU's make command to enable the ``cSmartRedisAdaptor``:
+
+.. code-block:: bash
+    
+    $make DEVICE=CUDA NUMWI=256 TARGETS=70 USE_SMARTSIM=ON
+
+The script ``make.sh`` in ``autodock-v1.5.1`` directory provides additional details.
 
 Data Sharing Strategy
 =====================
 
 TODO: Explains how Autodock-GPU handles data, the  ``cSmartRedisAdaptor`` and ``analysis.py``
 
-Execution
-=========
+Local Execution
+===============
 
-TODO: Explains ``driver.py``
+Instructions to execute Autodock-SS are condensed in ``driver.py`` script. First, we create an ``Experiment`` that executes Autodock-SS via ``launch_autodock.sh`` script. After docking is finalized, Autodock-SS' in-memory data base (SmartRedis) is left running to allow ``analysis.ipynb`` notebook get connected to SmartRedis for analysis/visualization. In summary:
+
+- In a terminal, run Autodock-GPU simulation as shown below. 
+
+.. code-block:: bash
+
+    $ python driver.py
+
+    14:41:27 fulano SmartSim[4063] INFO Working in previously created experiment
+    === LAUNCH SUMMARY ===
+    Experiment: autodock
+    Experiment Path: /home/benjha/code/nvbl/scripts/autodock
+    Launching with: local
+    # of Ensembles: 0
+    # of Models: 1
+    Database: no
+
+    === MODELS ===
+    docking
+    Model Parameters:
+    {}
+    Model Run Settings:
+    Executable: /bin/bash
+    Executable arguments: ['launch_autodock.sh']
+
+    Dataset written
+    <smartredis.smartredisPy.PyDataset object at 0x7fc7c412bfb0>
+
+- In a different terminal, launch Jupyter and open ``analysis.ipynb`` notebook.
+
 
 SUMMIT
 ======
+
+
 
 TODO: Explains LSF scripts for the clients, modules and Jupyter 
